@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Book Cafe Agasa</title>
+</head>
+<body>
+    <header class="header js-float-menu">
+        <h1 class="header-title">Book Cafe Agasa</h1>
+
+        <div class="menu-trigger js-toggle-sp-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+
+    <nav class="nav js-nav">
+        <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#news">NEWS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#concept">CONCEPT</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
+        <li class="nav-item"><a class="nav-link" href="#access">ACCESS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+    </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero js-float-menu-target">
+        <h2 class="hero-title">A room without books is like a body without a soul.</h2>
+    </section>
+
+    <section class="container section-news" id="news">
+        <h2 class="section-title">NEWS</h2>
+            <div class="news">
+                <dl class="news-wrap">
+                <dt class="news-wrap_date">2020.04.03</dt>
+                <dd class="news-wrap_summary">テストテストテストテストテストテスト</dd>
+                <dt class="news-wrap_date">2020.04.02</dt>
+                <dd class="news-wrap_summary">テストテストテストテストテストテスト</dd>
+                <dt class="news-wrap_date">2020.04.01</dt>
+                <dd class="news-wrap_summary">オープン記念実施中です。</dd>
+                <dt class="news-wrap_date">2020.04.01</dt>
+                <dd class="news-wrap_summary">Book Cafe Agasaオープンしました！</dd>
+                </dl>
+            </div>
+
+    </section>
+
+    <section class="bgcolor-green section-concept" id="concept">
+        <div class="container">
+        <h2 class="section-title">CONCEPT</h2>
+        <p class="concept-main">
+            Book Cafe Agasaは美味しい珈琲、紅茶を飲みながら本を読むことが<br>
+            できる「ブックカフェ」という名の読書場です。<br>
+            ここでは、あなたの読書時間を邪魔するものは何もありません。<br>
+            席は個室で区切られ、他の人の視線を気にすることもありません。<br>
+            <br>
+            読書とは、素晴らしいものです。<br>
+            面白い本を読んで、腹を抱えて笑うこと。<br>
+            感動的な本を読んで、目が腫れるまで泣いてしまうこと。<br>
+            素晴らしい本と出会い、人生が色付くこともあるでしょう。<br>
+            <br>
+            このBook Cafe Agasaは、とことん本と向き合える場所です。<br>
+            <br>
+            今日も、あなたのお越しをお待ちしております。
+        </p>
+    </div>
+    </section>
+
+    <section class="container section-menu js-menu" id="menu">
+        <h2 class="section-title">MENU</h2>
+        <p>読書のお供にいかがでしょうか。</p>
+        <div class="menu-coffee menues">
+            <img src="img/coffee.jpg" class="coffee-img">
+            <table>
+                <tr><td>珈琲</td></tr>
+                <tr><td>¥300 +tax</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-tea menues">
+            <img src="img/tea.jpg" class="tea-img">
+            <table>
+                <tr><td>紅茶</td></tr>
+                <tr><td>¥300 +tax</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="bgcolor-green" id="access">
+        <div class="container section-access">
+        <h2 class="section-title">ACCESS</h2>
+        <div class="access-map">
+            <img src="img/map.jpg" class="access-map_img">
+        <div class="access-map_summary">
+        <p>池袋駅の西武東口を出て目の前にございます。<br>
+        ドン・キホーテさんの隣にある建物です。</p>
+    </div>
+</div>
+    </section>
+
+    <section class="container section-contact" id="contact">
+        <h2 class="section-title">CONTACT</h2>
+        <input type="text" class="send section-contact_name" placeholder="お名前">
+        <input type="email" class="send section-contact_email" placeholder="E-mail">
+        <textarea name="text" class="send section-contact_comment" placeholder="お問い合わせ内容"></textarea>
+        <input type="submit" class="section-contact_send" value="送信">
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Copyright &#169; Book Cafe Agasa. All Rights Reserved</p>
+</footer>
+    
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

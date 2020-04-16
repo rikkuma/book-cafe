@@ -1,0 +1,16 @@
+{
+  "name": "responsive_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author":"",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.3"
+  }
+}
