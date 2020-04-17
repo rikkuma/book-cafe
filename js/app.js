@@ -35,6 +35,10 @@ $(function(){
     $('.js-toggle-sp-menu').on('click', function(){
         $(this).toggleClass('active');
         $('.js-nav').toggleClass('active');
-    })
+    });
 
-})
+    $('.nav-link').on('click',function(){
+        $('.js-nav').removeClass('active');
+    });
+
+});
