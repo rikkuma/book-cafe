@@ -63,9 +63,6 @@ $breakpoints:(
     }
     &:hover:after{
         width:100%;
-        @include mq('sp'){
-            width:80%;
-        }
     }
 }
 
@@ -121,6 +118,10 @@ p,a{
     position:relative;
     box-sizing:border-box;
     z-index:3;
+    @include mq('tab'){
+        display:inline-block;
+        z-index:3;
+    }
     @include mq('sp'){
         display:inline-block;
         z-index:3;
@@ -159,6 +160,23 @@ p,a{
 }
 
 .nav{
+    @include mq('tab'){
+        display: block;
+        position: absolute;
+        top:0;
+        right:-100%;
+        width:100%;
+        height:100vh;
+        background-color:rgba(36, 36, 36, 0.86);
+        padding-top:$space_100;
+        transition: .5s;
+        box-sizing: border-box;
+        &.active{
+            transition: .5s;
+            transform: translateX(-100%);
+            z-index: 2;
+        }
+    }
     @include mq('sp'){
         display: block;
         position: absolute;
@@ -178,6 +196,10 @@ p,a{
     }
     &-list{
         display:flex;
+        @include mq('tab'){
+            display:block;
+            font-size:$font-size_xxl;
+        }
         @include mq('sp'){
             display:block;
             font-size:$font-size_xxl;
@@ -194,6 +216,11 @@ p,a{
         display: inline-block;
         transition: .3s;
         padding-bottom:$space_s;
+        @include mq('tab'){
+            display:block;
+            padding:$space_3l;
+            text-align:center;
+        }
         @include mq('sp'){
             display:block;
             padding:$space_xl;
@@ -224,6 +251,11 @@ p,a{
         font-size:40px;
         text-shadow:0 0 20px #003310;
         z-index:0;
+        @include mq('tab'){
+            padding:$space_s;
+            text-align:center;
+            line-height:1.8em;
+        }
         @include mq('sp'){
             padding:$space_s;
             text-align:center;
@@ -258,7 +290,11 @@ p,a{
     padding:$space_100;
     text-align:center;
     position: sticky;
-	position: -webkit-sticky;
+    position: -webkit-sticky;
+    @include mq('tab'){
+        width:100%;
+        padding:$space_100 $space_xl;
+    }
     @include mq('sp'){
         width:100%;
         padding:$space_100 $space_xl;
@@ -367,6 +403,7 @@ p,a{
     opacity:0;
     transform:translate(300px,50px);
     transition: .5s;
+    text-align: right;
     &.js-fadein{
         opacity:1;
         transform: translate(0,0);
@@ -381,20 +418,18 @@ p,a{
     .tea-img{
         width:calc(70% - #{$space_3l});
         float:right;
-        padding-right:$space_3l;
+        padding-left:$space_3l;
         @include mq('sp'){
             width:calc(65% - #{$space_m});
-            padding-right:$space_m;
+            padding-left:$space_m;
         }
     }
     table{
         display: inline-block;
         text-align:left;
         margin-top:140px;
-        width:30%;
         @include mq('sp'){
             margin-top:60px;
-            width:35%;
         }
     }
 }
@@ -421,6 +456,9 @@ p,a{
 .section-contact{
     width:60%;
     text-align: right;
+    @include mq('tab'){
+        width:60%;
+    }
     @include mq('sp'){
         width:90%;
     }
