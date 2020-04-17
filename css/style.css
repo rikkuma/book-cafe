@@ -163,7 +163,9 @@ p, a {
   width: 980px;
   box-sizing: border-box;
   padding: 100px;
-  text-align: center; }
+  text-align: center;
+  position: sticky;
+  position: -webkit-sticky; }
   @media screen and (max-width: 767px) {
     .container {
       width: 100%;
@@ -204,50 +206,78 @@ p, a {
     text-align: left; }
 
 .section-menu {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .menu-coffee {
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 80px;
   margin-bottom: 80px;
+  align-items: center;
   opacity: 0;
   transform: translate(-300px, 50px);
   transition: .5s; }
   .menu-coffee.js-fadein {
     opacity: 1;
     transform: translate(0, 0);
-    transition: .5s; }
+    transition: .5s;
+    box-sizing: border-box; }
   .menu-coffee:after {
     content: '';
     clear: both;
     display: block; }
   .menu-coffee .coffee-img {
-    width: 60%;
+    width: calc(70% - 40px);
     float: left;
     padding-right: 40px; }
+    @media screen and (max-width: 767px) {
+      .menu-coffee .coffee-img {
+        width: calc(65% - 10px);
+        padding-right: 10px; } }
   .menu-coffee table {
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    margin-top: 140px;
+    width: 30%; }
+    @media screen and (max-width: 767px) {
+      .menu-coffee table {
+        margin-top: 60px;
+        width: 35%; } }
 
 .menu-tea {
+  width: 100%;
   text-align: right;
+  box-sizing: border-box;
   opacity: 0;
   transform: translate(300px, 50px);
   transition: .5s; }
   .menu-tea.js-fadein {
     opacity: 1;
     transform: translate(0, 0);
-    transition: .5s; }
+    transition: .5s;
+    box-sizing: border-box; }
   .menu-tea:after {
     content: '';
     clear: both;
     display: block; }
   .menu-tea .tea-img {
-    width: 60%;
+    width: calc(70% - 40px);
     float: right;
-    padding-left: 40px; }
+    padding-right: 40px; }
+    @media screen and (max-width: 767px) {
+      .menu-tea .tea-img {
+        width: calc(65% - 10px);
+        padding-right: 10px; } }
   .menu-tea table {
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    margin-top: 140px;
+    width: 30%; }
+    @media screen and (max-width: 767px) {
+      .menu-tea table {
+        margin-top: 60px;
+        width: 35%; } }
 
 .access-map_img {
   width: 45%; }

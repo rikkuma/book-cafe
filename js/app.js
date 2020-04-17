@@ -1,6 +1,6 @@
 $(function(){
     //メニューバー背景切り替え
-    var targetHeight = $('.js-float-menu-target').height();
+    var targetHeight = $('.js-float-menu-target').height() - 40;
     $(window).on('scroll', function(){
         $('.js-float-menu').toggleClass('float-active', $(this).scrollTop() > targetHeight);
     });

@@ -257,6 +257,8 @@ p,a{
     box-sizing: border-box;
     padding:$space_100;
     text-align:center;
+    position: sticky;
+	position: -webkit-sticky;
     @include mq('sp'){
         width:100%;
         padding:$space_100 $space_xl;
@@ -315,10 +317,14 @@ p,a{
 //==========================
 .section-menu{
     position: relative;
+    overflow: hidden;
 }
 .menu-coffee{
+    width:100%;
+    box-sizing: border-box;
     margin-top:80px;
     margin-bottom:80px;
+    align-items: center;
     opacity:0;
     transform:translate(-300px,50px);
     transition: .5s;
@@ -326,6 +332,7 @@ p,a{
         opacity:1;
         transform: translate(0,0);
         transition: .5s;
+        box-sizing: border-box;
     }
     &:after{
         content:'';
@@ -333,18 +340,30 @@ p,a{
         display:block;
     }
     .coffee-img{
-        width:60%;
+        width:calc(70% - #{$space_3l});
         float:left;
         padding-right:$space_3l;
+        @include mq('sp'){
+            width:calc(65% - #{$space_m});
+            padding-right:$space_m;
+        }
     }
     table{
         display: inline-block;
         text-align:left;
+        margin-top:140px;
+        width:30%;
+        @include mq('sp'){
+            margin-top:60px;
+            width:35%;
+        }
     }
 }
 
 .menu-tea{
+    width:100%;
     text-align: right;
+    box-sizing: border-box;
     opacity:0;
     transform:translate(300px,50px);
     transition: .5s;
@@ -352,6 +371,7 @@ p,a{
         opacity:1;
         transform: translate(0,0);
         transition: .5s;
+        box-sizing: border-box;
     }
     &:after{
         content:'';
@@ -359,13 +379,23 @@ p,a{
         display:block;
     }
     .tea-img{
-        width:60%;
+        width:calc(70% - #{$space_3l});
         float:right;
-        padding-left:$space_3l;
+        padding-right:$space_3l;
+        @include mq('sp'){
+            width:calc(65% - #{$space_m});
+            padding-right:$space_m;
+        }
     }
     table{
         display: inline-block;
         text-align:left;
+        margin-top:140px;
+        width:30%;
+        @include mq('sp'){
+            margin-top:60px;
+            width:35%;
+        }
     }
 }
 
